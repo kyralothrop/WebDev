@@ -1,7 +1,19 @@
-.main_color{
-    background-color: darkseagreen;
+body {
+    font-family: Arial;
+    margin: 0px;
 }
 
-.secondary_color{
-    background-color: azure;
+.main_color {
+    background-color: rgb(88, 130, 198);
+}
+
+.secondary_color {
+    background-color: rgb(142, 161, 193);
+}
+
+.background {
+    padding: 10px;
+    border-radius: 5px;
+    height: fit-content;
+    width: fit-content;
 }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        #breadcrumb_nav {
+            width: fit-content;
+            padding: 10px 10px;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        #breadcrumb_nav li {
+            display: inline;
+        }
+
+        #breadcrumb_nav li+li:before {
+            padding: 10px;
+            color: #2c3238;
+            content: ">";
+        }
+
+        #breadcrumb_nav li a {
+            color: #2c3238;
+            text-decoration: none;
+        }
+
+        #breadcrumb_nav li a:hover {
+            color: #000000;
+        }
+
+    </style>
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <div class = "secondary_color background">
+            <ul id = "breadcrumb_nav" class = "main_color">
+                <li><a href= "#">Main</a></li>
+                <li><a href= "#">Next</a></li>
+                <li><a href= "#">After</a></li>
+            </ul>
+        </div>
+    </body>
+</html>
