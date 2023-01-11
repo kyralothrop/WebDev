@@ -1,53 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
     <style>
-        img, iframe{
-            border-radius: 10px;
-            margin: auto;
-            border-color: 1px black;
-            width: -webkit-fill-available;
-            height: -webkit-fill-available;
-            min-height: 300px;
-        }
-        
-        .sidenav {
-            height: 100%;
-            width: 160px;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: #111;
-            overflow-x: hidden;
-            padding-top: 20px;
+        iframe{
+            display: inline;
+            margin: 20px;
+            min-height: 400px;
+            min-width: 400px;
+            border: 1px black;
         }
 
-        .sidenav a {
-            padding: 6px 8px 6px 16px;
-            text-decoration: none;
-            font-size: 25px;
-            color: #818181;
-            display: block;
-        }
-
-        .sidenav a:hover {
-            color: #f1f1f1;
-        }
-
-        .main {
-            margin-left: 160px; /* Same as the width of the sidenav */
-            font-size: 28px; /* Increased text to enable scrolling */
-            padding: 0px 10px;
-        }
-
-        @media screen and (max-height: 450px) {
-            .sidenav {padding-top: 15px;}
-            .sidenav a {font-size: 18px;}
+        iframe:hover {
+            -webkit-filter: brightness(70%);
         }
 
         #table {
             margin-left: 50px;
             margin-right: 50px;
+        }
+
+        #page_header{
+            margin-left: 20px;
         }
 
     </style>
@@ -72,62 +44,30 @@
         <br>
         <br>
 
+        <!-- TODO: Move the nav bar into a separate file -->
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">About</a>
+            <a href="index.html">Index</a>
+            <a href="datatable.html">DataTable</a>
             <a href="#">Services</a>
             <a href="#">Clients</a>
             <a href="#">Contact</a>
         </div>
 
         <div class = "main">
-            <div id="table">
-                <table id="demo_table" class="table table-striped table-bordered">
-                    <thead>
-                        <tr>
-                            <th>a</th>
-                            <th>b</th>
-                        </tr>
-                    </thead>
-                    <!-- TODO For file in folder instead of hardcoded -->
-                    <tbody>
-                        <tr>
-                            <td>
-                                <h1>Login Page</h1>
-                                <iframe src="login_screen.html"></iframe>
-                            </td>
-                            <td>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h1>Breadcrumb Navigation</h1>
-                                <iframe src="breadcrumb_nav.html"></iframe>
-                            </td>
-                            <td>
-                                <h1>Toggle Switch</h1>
-                                <iframe src="toggle_switch.html"></iframe>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h1>Glass Effect</h1>
-                                <iframe src="glass_effect.html"></iframe>
-                            </td>
-                            <td>
-                                <h1>Radio Button</h1>
-                                <iframe src="radio_button.html"></iframe>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+            <h1 id="page_header">HTML and CSS Demo Page</h1>
+            <br>
+            <br>
+            <!-- TODO: Page explanation -->
 
-        <script>
-            $(document).ready(function() {
-                $('#demo_table').DataTable();
-            } );
-        </script>
+            <!-- TODO Make searchable -->
+            <!-- TODO give the iframe borders -->
+            <iframe src="login_screen.html"></iframe>
+            <iframe src="breadcrumb_nav.html"></iframe>
+            <iframe src="toggle_switch.html"></iframe>
+            <iframe src="glass_effect.html"></iframe>
+            <iframe src="radio_button.html"></iframe>
+
+        </div>
     </body>
 </html>
