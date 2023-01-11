@@ -4,13 +4,18 @@
         iframe{
             display: inline;
             margin: 20px;
+            padding: 15px;
             min-height: 400px;
             min-width: 400px;
             border: 1px black;
+            border-radius: 10px;
+            background-color: aliceblue;
         }
 
         iframe:hover {
-            -webkit-filter: brightness(70%);
+            /* -webkit-filter: invert(70%); */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+
         }
 
         #table {
@@ -20,6 +25,12 @@
 
         #page_header{
             margin-left: 20px;
+        }
+
+        #examples_div {
+            background-color: #ececec;
+            border-radius: 20px;
+
         }
 
     </style>
@@ -45,6 +56,7 @@
         <br>
 
         <!-- TODO: Move the nav bar into a separate file -->
+        <!-- https://docs.djangoproject.com/en/4.1/ref/templates/language/ -->
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="index.html">Index</a>
@@ -62,12 +74,13 @@
 
             <!-- TODO Make searchable -->
             <!-- TODO give the iframe borders -->
-            <iframe src="login_screen.html"></iframe>
-            <iframe src="breadcrumb_nav.html"></iframe>
-            <iframe src="toggle_switch.html"></iframe>
-            <iframe src="glass_effect.html"></iframe>
-            <iframe src="radio_button.html"></iframe>
-
+            <div id="examples_div">
+                <iframe class="secondary_color" src="login_screen.html"></iframe>
+                <iframe class="secondary_color"src="breadcrumb_nav.html"></iframe>
+                <iframe class="secondary_color" src="toggle_switch.html"></iframe>
+                <iframe class="secondary_color" src="glass_effect.html"></iframe>
+                <iframe class="secondary_color" src="radio_button.html"></iframe>
+            </div>
         </div>
     </body>
 </html>
